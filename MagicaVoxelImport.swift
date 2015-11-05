@@ -16,7 +16,7 @@ struct Voxel {
 struct RGBA {
     var r, g, b, a: UInt8
     var color: SKColor {
-        let z = [r,g,b,a].map({ CGFloat($0)/256 })
+        let z = [r,g,b,a].map({ CGFloat($0)/255 })
         return SKColor(red: z[0], green: z[1], blue: z[2], alpha: z[3])
     }
 }
